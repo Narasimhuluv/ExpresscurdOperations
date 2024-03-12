@@ -1,0 +1,94 @@
+:root {
+ --primary: #0099ff;
+ --primary-dark: #d5f8ff;
+ --white-color: #ffff;
+ --black-color: #000000;
+ --danger-color: red;
+}
+
+.header {
+ padding: 1rem;
+ color: var(--white-color);
+}
+
+.header_btn {
+ padding: 0.5rem 1rem;
+ background-color: var(--primary);
+ border-radius: 0.5rem;
+ transition: all 0.2s ease-in-out;
+}
+
+.header_btn:hover {
+ background-color: var(--primary-dark);
+ color: var(--black-color);
+}
+
+/* home page  */
+.title_page {
+ text-align: center;
+ font-size: 2.5rem;
+ font-weight: 600;
+}
+.header_btn1 {
+ display: flex;
+ width: fit-content;
+ margin: auto;
+ margin-top: 2rem;
+ color: var(--white-color);
+}
+
+.homePageImg {
+ width: 50%;
+ margin: auto;
+}
+.waves {
+ margin-top: -14rem;
+}
+
+/* form */
+.form {
+ height: 90vh;
+}
+.inputSet {
+ margin-bottom: 1rem;
+}
+.inputSet label {
+ display: block;
+ width: fit-content;
+}
+.inputSet input,
+.inputSet textarea {
+ border: 1px solid rgba(128, 128, 128, 0.59);
+ width: 100%;
+ outline: none;
+ padding: 0.4rem 0.3rem;
+ border-radius: 0.2rem;
+}
+/* all Articles */
+.articleTitle {
+ font-size: 1.5rem;
+ color: var(--primary);
+ /* margin-bottom: 1rem; */
+}
+
+.edit_btn {
+ color: var(--white-color);
+ margin-right: 1rem;
+}
+.delete_btn {
+ background-color: var(--danger-color);
+}
+.incBtn {
+ display: block;
+ width: fit-content;
+ margin-top: 0.5rem;
+ background-color: green;
+}
+.count {
+ margin-left: 1rem;
+}
+.waves1 {
+ position: fixed;
+ bottom: 0;
+ z-index: -99;
+}

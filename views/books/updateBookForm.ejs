@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blog App</title>
+  <link rel="stylesheet" href="/stylesheets/default.css" />
+  <link rel="stylesheet" href="/stylesheets/index.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+   href="https://fonts.googleapis.com/css2?family=Anta&family=Fredoka:wght@300..700&display=swap"
+   rel="stylesheet"
+  />
+ </head>
+ <body>
+  <header class="header">
+   <nav class="container">
+    <ul class="flex alignCenter spaceBetween">
+     <li><a href="/" class="header_btn">Home</a></li>
+     <li>
+      <a href="/books" class="header_btn">All Books</a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+
+  <main>
+   <form
+    action="/books/<%=book.id %>"
+    method="post"
+    class="container flex justifyCenter form alignCenter"
+   >
+    <figure class="flex45">
+     <img style="width: 100%" src="/images/formImg.png" alt="" />
+    </figure>
+    <fieldset class="flex28">
+     <div class="inputSet">
+      <label for="title">Title</label>
+      <input
+       id="title"
+       name="title"
+       type="text"
+       value="<%=book.title %>"
+       placeholder="Enter Your Article Title"
+      />
+     </div>
+
+     <div class="inputSet">
+      <label for="Summary">Summary</label>
+      <input
+       id="Summary"
+       type="text"
+       name="summary"
+       value="<%= book.summary %>"
+       placeholder="Enter Your Summary"
+      />
+     </div>
+
+     <div class="inputSet">
+      <label for="pages">Pages</label>
+      <input
+       id="Pages"
+       type="Pages"
+       value="<%= book.pages%>"
+       name="pages"
+       placeholder="Enter Pages"
+      />
+     </div>
+     <div class="inputSet">
+      <label for="Publication">Publication</label>
+      <input
+       id="Publication"
+       type="Publication"
+       name="publication"
+       value="<%=book.publication%>"
+       placeholder="Enter Article Publication"
+      />
+     </div>
+
+     <div class="inputSet">
+      <label for="cover_image">Cover Image</label>
+      <input
+       type="text"
+       name="cover_image"
+       value="<%=book.cover_image%>"
+       placeholder="Past Your Cover Image Link"
+      />
+     </div>
+
+     <div class="inputSet">
+      <label for="categories">categories</label>
+      <input
+       type="text"
+       name="categories"
+       id="categories"
+       value="<%=book.categories%>"
+       placeholder="after each category place comma"
+      />
+     </div>
+
+     <input
+      class="header_btn"
+      style="background-color: #cbf0f8"
+      type="submit"
+     />
+    </fieldset>
+   </form>
+  </main>
+ </body>
+</html>

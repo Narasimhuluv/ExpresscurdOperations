@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog App</title>
+  <link rel="stylesheet" href="/stylesheets/default.css" />
+  <link rel="stylesheet" href="/stylesheets/index.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+   href="https://fonts.googleapis.com/css2?family=Anta&family=Fredoka:wght@300..700&display=swap"
+   rel="stylesheet"
+  />
+ </head>
+ <body>
+  <header class="header">
+   <nav class="container">
+    <ul class="flex alignCenter spaceBetween">
+     <li><a href="/" class="header_btn border">Home</a></li>
+     <li>
+      <a href="/books/<%=comment.bookId%>" class="header_btn border">Back</a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+  <form
+   action="/comments/<%=comment.id %>"
+   method="post"
+   style="width: 30%; margin: 6rem auto"
+  >
+   <label for="content" style="display: block">Content</label>
+   <textarea name="content" class="border" id="content" cols="30" rows="7">
+    <%=comment.content %></textarea
+   >
+   <input
+    class="header_btn border"
+    style="margin-top: 0rem; display: block"
+    type="submit"
+   />
+  </form>
+ </body>
+</html>
